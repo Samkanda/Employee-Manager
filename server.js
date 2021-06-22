@@ -1,4 +1,7 @@
+
 const express = require('express');
+const serverless = require ('serverless-http')
+
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyParser = require("body-parser");
@@ -9,7 +12,7 @@ const connectDB = require('./server/database/connection');
 const app = express();
 
 dotenv.config( { path : 'config.env'} )
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 3000
 
 // log requests
 app.use(morgan('tiny'));
@@ -24,7 +27,7 @@ app.use('/uploads', express.static('uploads'));
 
 // set view engine
 app.set("view engine", "ejs")
-//app.set("views", path.resolve(__dirname, "views/ejs"))
+
 
 // load assets
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
@@ -35,4 +38,5 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 app.use('/', require('./server/routes/router'))
 
 
-app.listen(PORT, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
+app.listen(process.env.PORT || 3000, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
+
