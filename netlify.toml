@@ -3,4 +3,4 @@
     command = "npm install && npm run build"
 
 [dev]
-  publish = "dist/"  
+  publish = "views/"  
