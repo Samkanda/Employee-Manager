@@ -1,11 +1,5 @@
 [build]
-    base = "/"
-    publish = "views/"
-    command = "npm run build"
-    functions = "server/"
+    functions = "server"
 
-[[redirects]]
-    from = "/*"
-    to = "/index.html"
-    status = 200
-    
+[dev]
+  publish = "views"  
