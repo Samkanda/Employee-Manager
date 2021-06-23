@@ -1,5 +1,6 @@
 [build]
     functions = "server"
+    command = "npm install && npm run build"
 
 [dev]
   publish = "views/"  
