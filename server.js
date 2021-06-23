@@ -36,7 +36,7 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 // load routers
 // This might be wrong !!!!
-app.use('/.netlify/server', require('./server/routes/router'))
+app.use('/.netlify/functions/server', require('./server/routes/router'))
 
 
 //app.listen(process.env.PORT || 3000, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
