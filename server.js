@@ -39,7 +39,7 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 app.use('/.netlify/server', require('./server/routes/router'))
 
 
-app.listen(process.env.PORT || 3000, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
+//app.listen(process.env.PORT || 3000, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
 
 //Stuff for Netlify
 module.exports = app;
