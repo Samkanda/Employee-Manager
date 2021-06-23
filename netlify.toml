@@ -1,11 +1,11 @@
 [build]
     base = "/"
     publish = "views/"
-    command = “CI= npm run build”
+    command = "npm run build"
     functions = "server/"
 
 [[redirects]]
     from = "/*"
-    to = "/index.ejs"
+    to = "/index.html"
     status = 200
     
