@@ -2,10 +2,10 @@
     base = "/"
     publish = "views/"
     command = "npm run build"
-    functions = "server"
+    functions = "server/"
 
 [[redirects]]
     from = "/*"
-    to = "/index.html"
+    to = "/index.ejs"
     status = 200
     
